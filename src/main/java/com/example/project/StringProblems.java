@@ -9,6 +9,9 @@ public class StringProblems{
     // endsLy("oddy") → false
     public boolean endsLy(String x){
             //implement code here
+        if(x.substring(x.length() - 2).equals("ly")) {
+            return true;
+        }
         return false;
     }
 
@@ -21,6 +24,14 @@ public class StringProblems{
     // conCat("abc", "") → "abc"
     public String conCat(String s1, String s2){
         //implement code here
+        if(s1.substring(s1.length() - 1).equals(s2.substring(0, 1))) {
+            return s1 + s2.substing(1);
+        }
+
+        else{
+            return s1 + s2;
+        }
+
         return "";
     }
 
@@ -32,7 +43,14 @@ public class StringProblems{
     // deFront("away") → "aay"
     public String deFont(String s1){
         //implement code here
-        return "";
+        String removed = s1.substring(2);
+        if(s1.substring(1, 2).equals("b")) {
+            removed = "b" + removed;
+        }
+        if(s1.substring(0, 1).equals("a")) {
+            removed = "a" + removed;
+        }
+        return removed;
     }
 
     
@@ -43,6 +61,9 @@ public class StringProblems{
     // withoutX("xHi") → "Hi"
     // withoutX("Hxix") → "Hxi"
     public String withoutX(String s1){
+        if(s1.substring(0,1).equals("x")) {
+            
+        }
         return "";
     }
 
