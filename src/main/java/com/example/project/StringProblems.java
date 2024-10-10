@@ -1,3 +1,5 @@
+package com.example.project;
+
 public class StringProblems{
     //empty constructor
     public StringProblems(){}
@@ -9,6 +11,10 @@ public class StringProblems{
     // endsLy("oddy") → false
     public boolean endsLy(String x){
             //implement code here
+        if(x.length() < 2) {
+            return false;
+
+        }
         if(x.substring(x.length() - 2).equals("ly")) {
             return true;
         
@@ -25,17 +31,20 @@ public class StringProblems{
     // conCat("abc", "") → "abc"
     public String conCat(String s1, String s2){
         //implement code here
+        if(s1.isEmpty()) {
+            return s2;
+
+        }
+        if(s2.isEmpty()) {
+            return s1;
+
+        }
         if(s1.substring(s1.length() - 1).equals(s2.substring(0, 1))) {
             return s1 + s2.substring(1);
         
         }
 
-        else{
-            return s1 + s2;
-        
-        }
-
-        return "";
+        return s1 + s2;
     }
 
     // Given a string, return a version without the first 2 chars. 
@@ -124,13 +133,13 @@ public class StringProblems{
 
             }
             else {
-                return "Fizz";
+                return "Fizz!";
             }
 
         }
         if(x % 5 == 0) {
-            return "Buzz";
+            return "Buzz!";
         }
-        return x + "!";
+        return String.valueOf(x) + "!";
     }
 }
